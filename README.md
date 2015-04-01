@@ -66,4 +66,4 @@ chenai <wsy92@qq.com>
 
 ##License
 
-Copyright (C) 2014 wsy, MIT License
+Copyright (C) 2013-2015 chenai, MIT License
