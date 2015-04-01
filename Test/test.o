@@ -1,0 +1,15 @@
+LD reg[1] = dMem[1]
+LDC reg[2] = 10
+ADD
+ST dMem[1023] = reg[0]
+LD reg[1] = dMem[1023]
+LDC reg[2] = 10
+SUB
+JEQ 10
+JMP 6
+LD reg[1] = dMem[1]
+LDC reg[2] = 2
+MUL
+ST dMem[1022] = reg[0]
+LD reg[0] = dMem[2]
+ST dMem[1] = reg[0]

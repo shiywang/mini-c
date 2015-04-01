@@ -1,0 +1,65 @@
+LDC reg[0] = 0
+ST dMem[0]+11 = reg[0]
+LD reg[1] = dMem[11]+0
+LDC reg[2] = 10
+SUB
+JLT 8
+JMP 17
+IN reg[0]
+ST dMem[0]+11 = reg[0]
+LD reg[1] = dMem[11]+0
+LDC reg[2] = 1
+ADD
+ST dMem[1023]+0 = reg[0]
+LD reg[0] = dMem[1023]+0
+ST dMem[0]+11 = reg[0]
+JMP 3
+LDC reg[0] = 0
+ST dMem[0]+11 = reg[0]
+LD reg[1] = dMem[11]+0
+LDC reg[2] = 10
+SUB
+JLT 24
+JMP 50
+LD reg[0] = dMem[11]+0
+ST dMem[12]+0 = reg[0]
+LD reg[1] = dMem[12]+0
+LDC reg[2] = 10
+SUB
+JLT 31
+JMP 49
+LD reg[1] = dMem[0]+11
+LD reg[2] = dMem[0]+12
+SUB
+JGT 36
+JMP 42
+LD reg[0] = dMem[0]+11
+ST dMem[10]+0 = reg[0]
+LD reg[0] = dMem[0]+12
+ST dMem[0]+0 = reg[11]
+LD reg[0] = dMem[10]+0
+ST dMem[0]+0 = reg[12]
+LD reg[1] = dMem[12]+0
+LDC reg[2] = 1
+ADD
+ST dMem[1022]+0 = reg[0]
+LD reg[0] = dMem[1022]+0
+ST dMem[0]+12 = reg[0]
+JMP 26
+JMP 19
+LDC reg[0] = 0
+ST dMem[0]+11 = reg[0]
+LD reg[1] = dMem[11]+0
+LDC reg[2] = 10
+SUB
+JLT 57
+JMP 66
+LD reg[0] = dMem[0]+11
+OUT 0
+LD reg[1] = dMem[11]+0
+LDC reg[2] = 1
+ADD
+ST dMem[1021]+0 = reg[0]
+LD reg[0] = dMem[1021]+0
+ST dMem[0]+11 = reg[0]
+JMP 52

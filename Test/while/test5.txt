@@ -1,0 +1,7 @@
+main()
+{
+	while( a > 10 )
+		while( a > 100 )
+			while( a > 1000 )
+				a = 10;
+}

@@ -1,0 +1,7 @@
+main()
+{
+	while( a > 10 )
+		while( a < 10 )
+			a = 8;
+	a = 12;
+}
