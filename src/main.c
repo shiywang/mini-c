@@ -1,7 +1,7 @@
 /*
  *
  *  MCC
- *          ¡ª¡ªMini C Complier
+ *          â€”â€”Mini C Complier
  *  version : 0.2
  *  Language: ANSI C
  *  License : The MIT License (MIT)
@@ -43,7 +43,7 @@ int main( int argc, char ** argv )
 
     printf( "\n\n\n" );
     printf( "\t\tMSMCC\n" );
-    printf( "\t\t\t¡ª¡ªMy Simple Mini"
+    printf( "\t\t\tâ€”â€”My Simple Mini"
             "C Complier\n");
     printf( "\t\tversion : 0.2\n" );
     printf( "\t\tLanguage: ANSI C\n" );
@@ -57,7 +57,7 @@ int main( int argc, char ** argv )
     printf( "\t\t\t\t\tEnjoy it  \n\n" );
     printf( "\t\t\t\t\t\t:) " );
 
-    getche();
+    getchar();
 
 start:
     system( "cls" );
@@ -68,10 +68,10 @@ start:
         fflush( stdin );
         printf( "\n\n\n\n" );
         printf( "\t\t\tOpps\n" );
-        printf( "\t\t\t·Ç·¨Ñ¡Ïî,"
-                "ÇëÖØĞÂÊäÈë!\n" );
-        printf( "\t\t\t°´ÈÎÒâ¼ü·µ»Ø..." );
-        getch();
+        printf( "\t\t\téæ³•é€‰é¡¹,"
+                "è¯·é‡æ–°è¾“å…¥!\n" );
+        printf( "\t\t\tæŒ‰ä»»æ„é”®è¿”å›..." );
+        getchar();
         system( "cls" );
         Menu();
     }
@@ -80,30 +80,30 @@ start:
         case 1:
             system( "cls" );
             fflush( stdin );
-            printf( "´Ê·¨·ÖÎö\n" );
+            printf( "è¯æ³•åˆ†æ\n" );
             Scan();
-            getche();
+            getchar();
             break;
         case 2:
             system( "cls" );
             fflush( stdin );
-            printf( "ÖĞ¼ä´úÂëÉú³É\n" );
+            printf( "ä¸­é—´ä»£ç ç”Ÿæˆ\n" );
             Midle();
-            getche();
+            getchar();
             break;
         case 3:
             system( "cls" );
             fflush( stdin );
-            printf( "Ä¿±ê»úÆ÷´úÂëÉú³É\n" );
+            printf( "ç›®æ ‡æœºå™¨ä»£ç ç”Ÿæˆ\n" );
             ObjCode();
-            getche();
+            getchar();
             break;
         case 4:
             system( "cls" );
             fflush( stdin );
-            printf( "ĞéÄâ»úÖ´ĞĞ\n" );
+            printf( "è™šæ‹Ÿæœºæ‰§è¡Œ\n" );
             VirtualMachine();
-            getche();
+            getchar();
             break;
         case 5:
             system( "cls" );
@@ -111,10 +111,10 @@ start:
         case 6:
             system( "cls" );
             fflush( stdin );
-            printf( "¹ØÓÚ×÷Õß\t:)\n" );
-            printf( "\n\n\n\n\t\t\t×÷Õß±È½ÏÀÁ,"
-                    "Ê²Ã´¶¼Ã»Ğ´...." );
-            getche();
+            printf( "å…³äºä½œè€…\t:)\n" );
+            printf( "\n\n\n\n\t\t\tä½œè€…æ¯”è¾ƒæ‡’,"
+                    "ä»€ä¹ˆéƒ½æ²¡å†™...." );
+            getchar();
             break;
     }
     if( choose != 5 ) 
@@ -145,47 +145,47 @@ void Scan()
 {
     char inputFileName[21];
     char outputFileName[21];
-    printf( "ÇëÊäÈëÔ´ÎÄ¼şÃû³Æ,"
-            "ÇëÒÔ.cÀ©Õ¹ÃûÃüÃû\n" );
+    printf( "è¯·è¾“å…¥æºæ–‡ä»¶åç§°,"
+            "è¯·ä»¥.cæ‰©å±•åå‘½å\n" );
     fgets( inputFileName, 20, stdin );
     inputFileName[strlen(inputFileName)-1] = '\0';
     while( !InputValid( 'c', inputFileName ) )
     {   
-        printf( "ÎÄ¼şÀ©Õ¹Ãû´íÎó" 
-                "ÇëÖØĞÂÊäÈë:\n" );
+        printf( "æ–‡ä»¶æ‰©å±•åé”™è¯¯" 
+                "è¯·é‡æ–°è¾“å…¥:\n" );
         fgets( inputFileName, 20, stdin );
         inputFileName[strlen(inputFileName)-1] = '\0';
     }
     while((fpIn=fopen(inputFileName, "r")) == NULL )
     {
-        printf( "ÎÄ¼ş²»´æÔÚ" 
-                "ÇëÖØĞÂÊäÈë:\n" );
+        printf( "æ–‡ä»¶ä¸å­˜åœ¨" 
+                "è¯·é‡æ–°è¾“å…¥:\n" );
         fgets( inputFileName, 20, stdin );
         inputFileName[strlen(inputFileName)-1] = '\0';
     }
 
-    printf( "ÇëÊäÈëÊä³öÎÄ¼şÃû³Æ,"
-            "ÇëÒÔ.wÀ©Õ¹ÃûÃüÃû\n" );
+    printf( "è¯·è¾“å…¥è¾“å‡ºæ–‡ä»¶åç§°,"
+            "è¯·ä»¥.wæ‰©å±•åå‘½å\n" );
     fgets( outputFileName, 20, stdin );
     outputFileName[strlen(outputFileName)-1] = '\0';
     while( !InputValid( 'w', outputFileName ) )
     {
-        printf( "ÎÄ¼şÀ©Õ¹Ãû´íÎó" 
-                "ÇëÖØĞÂÊäÈë:\n" );
+        printf( "æ–‡ä»¶æ‰©å±•åé”™è¯¯" 
+                "è¯·é‡æ–°è¾“å…¥:\n" );
         fgets( outputFileName, 20, stdin );
         outputFileName[strlen(outputFileName)-1] = '\0';
     }
     fpOut = fopen( outputFileName, "w+" );
     if( fpOut != NULL )
-        printf( "ÎÄ¼ş´ò¿ª³É¹¦,ÕıÔÚÖ´ĞĞ´Ê·¨·ÖÎö...\n" );
+        printf( "æ–‡ä»¶æ‰“å¼€æˆåŠŸ,æ­£åœ¨æ‰§è¡Œè¯æ³•åˆ†æ...\n" );
     else
     {
-        printf( "ÎÄ¼ş´ò¿ªÊ§°Ü..." );
+        printf( "æ–‡ä»¶æ‰“å¼€å¤±è´¥..." );
         exit( 0 );
     }
     Scanner();
     PrintScan();
-    printf( "´Ê·¨·ÖÎöÍê±Ï£¬²é¿´ÎÄ¼ş%s\n",outputFileName );
+    printf( "è¯æ³•åˆ†æå®Œæ¯•ï¼ŒæŸ¥çœ‹æ–‡ä»¶%s\n",outputFileName );
     fclose( fpIn );
     fclose( fpOut );
 }
@@ -194,48 +194,48 @@ void Midle()
 {
     char inputFileName[21];
     char outputFileName[21];
-    printf( "ÇëÊäÈëÔ´ÎÄ¼şÃû³Æ,"
-            "ÇëÒÔ.cÀ©Õ¹ÃûÃüÃû\n" );
+    printf( "è¯·è¾“å…¥æºæ–‡ä»¶åç§°,"
+            "è¯·ä»¥.cæ‰©å±•åå‘½å\n" );
     fgets( inputFileName, 20, stdin );
     inputFileName[strlen(inputFileName)-1] = '\0';
     while( !InputValid( 'c', inputFileName ) )
     {
-        printf( "ÎÄ¼şÀ©Õ¹Ãû´íÎó" 
-                "ÇëÖØĞÂÊäÈë:\n" );
+        printf( "æ–‡ä»¶æ‰©å±•åé”™è¯¯" 
+                "è¯·é‡æ–°è¾“å…¥:\n" );
         fgets( inputFileName, 20, stdin );
         inputFileName[strlen(inputFileName)-1] = '\0';
     }
     while((fpIn=fopen(inputFileName, "r")) == NULL )
     {
-        printf( "ÎÄ¼ş²»´æÔÚ" 
-                "ÇëÖØĞÂÊäÈë:\n" );
+        printf( "æ–‡ä»¶ä¸å­˜åœ¨" 
+                "è¯·é‡æ–°è¾“å…¥:\n" );
         fgets( inputFileName, 20, stdin );
         inputFileName[strlen(inputFileName)-1] = '\0';
     }
 
-    printf( "ÇëÊäÈëÊä³öÎÄ¼şÃû³Æ,"
-            "ÇëÒÔ.mÀ©Õ¹ÃûÃüÃû\n" );
+    printf( "è¯·è¾“å…¥è¾“å‡ºæ–‡ä»¶åç§°,"
+            "è¯·ä»¥.mæ‰©å±•åå‘½å\n" );
     fgets( outputFileName, 20, stdin );
     outputFileName[strlen(outputFileName)-1] = '\0';
     while( !InputValid( 'm', outputFileName ) )
     {
-        printf( "ÎÄ¼şÀ©Õ¹Ãû´íÎó" 
-                "ÇëÖØĞÂÊäÈë:\n" );
+        printf( "æ–‡ä»¶æ‰©å±•åé”™è¯¯" 
+                "è¯·é‡æ–°è¾“å…¥:\n" );
         fgets( outputFileName, 20, stdin );
         outputFileName[strlen(outputFileName)-1] = '\0';
     }
     Scanner();
     fpOut = fopen( outputFileName, "w+" );
     if( fpOut != NULL )
-        printf( "ÎÄ¼ş´ò¿ª³É¹¦,ÕıÔÚÖ´ĞĞÖĞ¼ä´úÂëÉú³É...\n" );
+        printf( "æ–‡ä»¶æ‰“å¼€æˆåŠŸ,æ­£åœ¨æ‰§è¡Œä¸­é—´ä»£ç ç”Ÿæˆ...\n" );
     else
     {
-        printf( "ÎÄ¼ş´ò¿ªÊ§°Ü...");
+        printf( "æ–‡ä»¶æ‰“å¼€å¤±è´¥...");
         exit( 0 );
     }
     Parse();
     PrintQuad();
-    printf( "ÖĞ¼ä´úÂëÉú³ÉÍê±Ï£¬²é¿´ÎÄ¼ş%s\n",outputFileName );
+    printf( "ä¸­é—´ä»£ç ç”Ÿæˆå®Œæ¯•ï¼ŒæŸ¥çœ‹æ–‡ä»¶%s\n",outputFileName );
     fclose( fpIn );
     fclose( fpOut );
 }
@@ -244,33 +244,33 @@ void ObjCode()
 {
     char inputFileName[21];
     char outputFileName[21];
-    printf( "ÇëÊäÈëÔ´ÎÄ¼şÃû³Æ,"
-            "ÇëÒÔ.cÀ©Õ¹ÃûÃüÃû\n" );
+    printf( "è¯·è¾“å…¥æºæ–‡ä»¶åç§°,"
+            "è¯·ä»¥.cæ‰©å±•åå‘½å\n" );
     fgets( inputFileName, 20, stdin );
     inputFileName[strlen(inputFileName)-1] = '\0';
     while( !InputValid( 'c', inputFileName ) )
     {
-        printf( "ÎÄ¼şÀ©Õ¹Ãû´íÎó" 
-                "ÇëÖØĞÂÊäÈë:\n" );
+        printf( "æ–‡ä»¶æ‰©å±•åé”™è¯¯" 
+                "è¯·é‡æ–°è¾“å…¥:\n" );
         fgets( inputFileName, 20, stdin );
         inputFileName[strlen(inputFileName)-1] = '\0';
     }
     while((fpIn=fopen(inputFileName, "r")) == NULL )
     {
-        printf( "ÎÄ¼ş²»´æÔÚ" 
-                "ÇëÖØĞÂÊäÈë:\n" );
+        printf( "æ–‡ä»¶ä¸å­˜åœ¨" 
+                "è¯·é‡æ–°è¾“å…¥:\n" );
         fgets( inputFileName, 20, stdin );
         inputFileName[strlen(inputFileName)-1] = '\0';
     }
 
-    printf( "ÇëÊäÈëÊä³öÎÄ¼şÃû³Æ,"
-            "ÇëÒÔ.oÀ©Õ¹ÃûÃüÃû\n" );
+    printf( "è¯·è¾“å…¥è¾“å‡ºæ–‡ä»¶åç§°,"
+            "è¯·ä»¥.oæ‰©å±•åå‘½å\n" );
     fgets( outputFileName, 20, stdin );
     outputFileName[strlen(outputFileName)-1] = '\0';
     while( !InputValid( 'o', outputFileName ) )
     {
-        printf( "ÎÄ¼şÀ©Õ¹Ãû´íÎó" 
-                "ÇëÖØĞÂÊäÈë:\n" );
+        printf( "æ–‡ä»¶æ‰©å±•åé”™è¯¯" 
+                "è¯·é‡æ–°è¾“å…¥:\n" );
         fgets( outputFileName, 20, stdin );
         outputFileName[strlen(outputFileName)-1] = '\0';
     }
@@ -278,14 +278,14 @@ void ObjCode()
     Parse();
     fpOut = fopen( outputFileName, "w+" );
     if( fpOut != NULL )
-        printf( "ÎÄ¼ş´ò¿ª³É¹¦,ÕıÔÚÖ´ĞĞÄ¿±ê´úÂëÉú³É...\n" );
+        printf( "æ–‡ä»¶æ‰“å¼€æˆåŠŸ,æ­£åœ¨æ‰§è¡Œç›®æ ‡ä»£ç ç”Ÿæˆ...\n" );
     else
     {
-        printf( "ÎÄ¼ş´ò¿ªÊ§°Ü..." );
+        printf( "æ–‡ä»¶æ‰“å¼€å¤±è´¥..." );
         exit( 0 );
     }
     GenCode();
-    printf( "Ä¿±ê´úÂëÉú³ÉÍê±Ï£¬²é¿´ÎÄ¼ş%s\n",outputFileName );
+    printf( "ç›®æ ‡ä»£ç ç”Ÿæˆå®Œæ¯•ï¼ŒæŸ¥çœ‹æ–‡ä»¶%s\n",outputFileName );
     fclose( fpIn );
     fclose( fpOut );
 
@@ -295,21 +295,21 @@ void VirtualMachine( )
 {
     char inputFileName[21];
     char outputFileName[21];
-    printf( "ÇëÊäÈëÔ´ÎÄ¼şÃû³Æ,"
-            "ÇëÒÔ.cÀ©Õ¹ÃûÃüÃû\n" );
+    printf( "è¯·è¾“å…¥æºæ–‡ä»¶åç§°,"
+            "è¯·ä»¥.cæ‰©å±•åå‘½å\n" );
     fgets( inputFileName, 20, stdin );
     inputFileName[strlen(inputFileName)-1] = '\0';
     while( !InputValid( 'c', inputFileName ) )
     {
-        printf( "ÎÄ¼şÀ©Õ¹Ãû´íÎó" 
-                "ÇëÖØĞÂÊäÈë:\n" );
+        printf( "æ–‡ä»¶æ‰©å±•åé”™è¯¯" 
+                "è¯·é‡æ–°è¾“å…¥:\n" );
         fgets( inputFileName, 20, stdin );
         inputFileName[strlen(inputFileName)-1] = '\0';
     }
     while((fpIn=fopen(inputFileName, "r")) == NULL )
     {
-        printf( "ÎÄ¼ş²»´æÔÚ" 
-                "ÇëÖØĞÂÊäÈë:\n" );
+        printf( "æ–‡ä»¶ä¸å­˜åœ¨" 
+                "è¯·é‡æ–°è¾“å…¥:\n" );
         fgets( inputFileName, 20, stdin );
         inputFileName[strlen(inputFileName)-1] = '\0';
     }
@@ -325,12 +325,12 @@ void Menu()
     int x;
     for( x = 0; x < 80; x++ )
         printf( "*" );
-    printf( "\t\t\t\t1.´Ê·¨·ÖÎö\n" );
-    printf( "\t\t\t\t2.ÖĞ¼ä´úÂëÉú³É\n" );
-    printf( "\t\t\t\t3.Ä¿±ê»úÆ÷´úÂëÉú³É\n" );
-    printf( "\t\t\t\t4.ĞéÄâ»úÖ´ĞĞ\n" );
-    printf( "\t\t\t\t5.ÍË³ö³ÌĞò\n" );
-    printf( "\t\t\t\t6.¹ØÓÚ×÷Õß\t:)\n" );
+    printf( "\t\t\t\t1.è¯æ³•åˆ†æ\n" );
+    printf( "\t\t\t\t2.ä¸­é—´ä»£ç ç”Ÿæˆ\n" );
+    printf( "\t\t\t\t3.ç›®æ ‡æœºå™¨ä»£ç ç”Ÿæˆ\n" );
+    printf( "\t\t\t\t4.è™šæ‹Ÿæœºæ‰§è¡Œ\n" );
+    printf( "\t\t\t\t5.é€€å‡ºç¨‹åº\n" );
+    printf( "\t\t\t\t6.å…³äºä½œè€…\t:)\n" );
     for( x = 0; x < 80; x++ )
         printf( "*" );
     printf( "Please choose an option:" );
